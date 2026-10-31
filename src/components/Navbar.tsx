@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useReveal } from '../hooks/useReveal.ts'
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -11,11 +12,16 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { ref, visible } = useReveal<HTMLElement>(0)
 
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-200">
+    <header
+      ref={ref}
+      className={`sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-200 reveal reveal-down ${visible ? 'is-visible' : ''}`}
+      style={{ transitionDuration: '600ms' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* MedAlign Logo */}

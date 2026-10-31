@@ -1,3 +1,5 @@
+import Reveal from './Reveal.tsx'
+
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
@@ -5,17 +7,31 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column Text */}
           <div className="lg:col-span-7 text-left space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-brand-mint/20 border border-brand-mint/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold text-slate-800">
+            <Reveal
+              className="inline-flex items-center space-x-2 bg-brand-mint/20 border border-brand-mint/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold text-slate-800"
+              delay={40}
+            >
               <span className="w-2 h-2 rounded-full bg-brand-royal animate-pulse"></span>
               <span>Structured Patient Matching • Free for Patients</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            </Reveal>
+            <Reveal
+              as="h1"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight"
+              delay={120}
+            >
               Connect With Patients Who Are Looking for the <span className="gradient-text">Care You Provide</span>.
-            </h1>
-            <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl">
+            </Reveal>
+            <Reveal
+              as="p"
+              className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl"
+              delay={200}
+            >
               MedAlign helps patients discover suitable healthcare providers through a structured matching process. Partner with us to connect with patients seeking consultations that align with your clinic's specialities and services.
-            </p>
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+            </Reveal>
+            <Reveal
+              className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4"
+              delay={280}
+            >
               <a
                 href="#register"
                 className="bg-brand-royal hover:bg-brand-royal/95 text-white text-center font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-royal/25 hover:shadow-xl transition-all"
@@ -28,8 +44,11 @@ export default function Hero() {
               >
                 Explore How It Works
               </a>
-            </div>
-            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-100 text-slate-600 text-xs sm:text-sm font-medium">
+            </Reveal>
+            <Reveal
+              className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-100 text-slate-600 text-xs sm:text-sm font-medium"
+              delay={360}
+            >
               <div className="flex items-center space-x-2">
                 <i className="fa-solid fa-circle-check text-brand-steel"></i>
                 <span>No Flat Monthly Fees</span>
@@ -42,12 +61,16 @@ export default function Hero() {
                 <i className="fa-solid fa-circle-check text-brand-steel"></i>
                 <span>Transparent Terms</span>
               </div>
-            </div>
+            </Reveal>
           </div>
 
           {/* Right Column Graphic Visual */}
           <div className="lg:col-span-5">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <Reveal
+              className="relative mx-auto max-w-md lg:max-w-none"
+              direction="scale"
+              delay={220}
+            >
               {/* Decorative Backdrop Blob */}
               <div className="absolute -top-6 -right-6 w-72 h-72 gradient-bg rounded-full opacity-20 filter blur-3xl pointer-events-none"></div>
               <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-brand-mint rounded-full opacity-30 filter blur-3xl pointer-events-none"></div>
@@ -106,7 +129,7 @@ export default function Hero() {
                   </p>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>

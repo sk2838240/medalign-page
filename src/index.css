@@ -20,3 +20,43 @@
 .custom-shadow-lg {
     box-shadow: 0 20px 40px -10px rgba(18, 0, 172, 0.12);
 }
+
+.reveal {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+.reveal-up {
+    transform: translate3d(0, 30px, 0);
+}
+.reveal-down {
+    transform: translate3d(0, -30px, 0);
+}
+.reveal-left {
+    transform: translate3d(-36px, 0, 0);
+}
+.reveal-right {
+    transform: translate3d(36px, 0, 0);
+}
+.reveal-scale {
+    transform: scale(0.95);
+}
+.reveal-fade {
+    transform: none;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        will-change: auto !important;
+    }
+}

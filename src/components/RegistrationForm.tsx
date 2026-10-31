@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import Reveal from './Reveal.tsx'
 
 declare global {
   interface Window {
@@ -26,7 +27,7 @@ const locationsCountOptions = [
 export default function RegistrationForm() {
   const [submitted, setSubmitted] = useState(false)
 
-  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: FormEvent<HTMLElement>) => {
     event.preventDefault()
     setSubmitted(true)
 
@@ -41,19 +42,29 @@ export default function RegistrationForm() {
   return (
     <section id="register" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 custom-shadow-lg">
-          <div className="text-center space-y-3 mb-10">
-            <span className="text-brand-royal font-extrabold text-sm uppercase tracking-wider">Registration</span>
+        <Reveal
+          className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 custom-shadow-lg"
+          direction="scale"
+          delay={80}
+        >
+          <Reveal className="text-center space-y-3 mb-10" delay={200}>
+            <span className="block text-brand-royal font-extrabold text-sm uppercase tracking-wider">Registration</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Let's Bring Your Clinic Closer to the Right Patients.
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
               Complete the registration form below. Our team will review your practice information and get in touch to discuss partnership onboarding.
             </p>
-          </div>
+          </Reveal>
 
           {/* Form Element */}
-          <form id="clinic-form" className={`space-y-6 ${submitted ? 'hidden' : ''}`} onSubmit={handleFormSubmit}>
+          <Reveal
+            as="form"
+            id="clinic-form"
+            className={`space-y-6 ${submitted ? 'hidden' : ''}`}
+            delay={320}
+            onSubmit={handleFormSubmit}
+          >
             <div className="grid md:grid-cols-2 gap-6">
               {/* 1. Clinic or Hospital Name */}
               <div>
@@ -251,10 +262,10 @@ export default function RegistrationForm() {
                 Submit Partnership Request
               </button>
             </div>
-          </form>
+          </Reveal>
 
           {/* Form Submission Confirmation Alert Box (Hidden by default) */}
-          <div
+          <Reveal
             id="form-success"
             className={`${submitted ? '' : 'hidden '}mt-6 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3`}
           >
@@ -265,8 +276,8 @@ export default function RegistrationForm() {
             <p className="text-sm text-emerald-800">
               Thank you for registering your clinic with MedAlign. A confirmation email has been dispatched to your provided contact address. Our clinic onboarding team will reach out shortly.
             </p>
-          </div>
-        </div>
+          </Reveal>
+        </Reveal>
       </div>
     </section>
   )

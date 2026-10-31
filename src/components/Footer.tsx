@@ -1,3 +1,5 @@
+import Reveal from './Reveal.tsx'
+
 const year = new Date().getFullYear()
 
 export default function Footer() {
@@ -6,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1: Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
+          <Reveal className="lg:col-span-2 space-y-4" delay={0}>
             <a href="#" className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-lg bg-brand-royal flex items-center justify-center text-brand-mint font-bold text-lg">
                 <i className="fa-solid fa-stetho-scope"></i>
@@ -19,10 +21,10 @@ export default function Footer() {
               MedAlign (getmedalign.com) is a patient to clinic matching platform that simplifies healthcare discovery by evaluating patient requirements and connecting them with suitable healthcare providers.
             </p>
             <p className="text-xs text-slate-500">Official contact: partnerships@getmedalign.com</p>
-          </div>
+          </Reveal>
 
           {/* Col 2: Navigation */}
-          <div>
+          <Reveal delay={80}>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">Navigation</h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -41,10 +43,10 @@ export default function Footer() {
                 <a href="#onboarding" className="hover:text-white transition-colors">Clinic Onboarding</a>
               </li>
             </ul>
-          </div>
+          </Reveal>
 
           {/* Col 3: Partnerships */}
-          <div>
+          <Reveal delay={160}>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">Partnership</h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -57,10 +59,10 @@ export default function Footer() {
                 <a href="#register" className="hover:text-white transition-colors">Contact Support</a>
               </li>
             </ul>
-          </div>
+          </Reveal>
 
           {/* Col 4: Legal */}
-          <div>
+          <Reveal delay={240}>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">Legal Policy</h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -73,23 +75,26 @@ export default function Footer() {
                 <a href="#" className="hover:text-white transition-colors">Medical Disclaimer</a>
               </li>
             </ul>
-          </div>
+          </Reveal>
         </div>
 
         {/* Medical Disclaimer Box */}
-        <div className="p-4 rounded-xl bg-slate-800/60 border border-slate-800 text-[11px] text-slate-400 leading-relaxed space-y-1">
+        <Reveal
+          className="p-4 rounded-xl bg-slate-800/60 border border-slate-800 text-[11px] text-slate-400 leading-relaxed space-y-1"
+          delay={320}
+        >
           <p className="font-bold text-slate-300">Medical Disclaimer:</p>
           <p>
             MedAlign facilitates patient discovery and clinic matching. MedAlign is not a healthcare provider, does not offer medical advice, diagnostic evaluations, or treatment recommendations, and does not replace professional clinical decision making. All patient consultations occur directly between patients and their chosen healthcare providers.
           </p>
-        </div>
+        </Reveal>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+        <Reveal className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500" delay={400}>
           <p>
             &copy; <span id="year">{year}</span> MedAlign. All rights reserved. Registered healthcare partnership platform.
           </p>
-        </div>
+        </Reveal>
       </div>
     </footer>
   )

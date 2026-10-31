@@ -41,28 +41,41 @@ const onboardingSteps = [
   },
 ]
 
+import Reveal from './Reveal.tsx'
+
 export default function Onboarding() {
   return (
     <section id="onboarding" className="py-20 bg-brand-lightBg border-y border-slate-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-royal font-extrabold text-sm uppercase tracking-wider">Simple Steps</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+          <Reveal
+            as="span"
+            className="block text-brand-royal font-extrabold text-sm uppercase tracking-wider"
+            delay={0}
+          >
+            Simple Steps
+          </Reveal>
+          <Reveal
+            as="h2"
+            className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2"
+            delay={80}
+          >
             Get Your Clinic Onboarded in Five Simple Steps.
-          </h2>
-          <p className="text-slate-600 mt-4">
+          </Reveal>
+          <Reveal as="p" className="text-slate-600 mt-4" delay={160}>
             Our onboarding team guides your practice through verification to live opportunities smoothly.
-          </p>
+          </Reveal>
         </div>
 
         {/* Onboarding Timeline Visual */}
         <div className="space-y-6 max-w-4xl mx-auto">
           {onboardingSteps.map((step, index) => (
-            <div
+            <Reveal
               key={step.number}
               className={`bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start space-x-4 ${
                 index === onboardingSteps.length - 1 ? 'border-l-4 border-l-brand-mint' : ''
               }`}
+              delay={200 + index * 90}
             >
               <div
                 className={`w-10 h-10 rounded-full ${step.badge} ${step.badgeText} font-bold flex items-center justify-center shrink-0`}
@@ -73,18 +86,18 @@ export default function Onboarding() {
                 <h3 className="font-bold text-slate-900 text-lg">{step.title}</h3>
                 <p className="text-sm text-slate-600 mt-1">{step.description}</p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <Reveal className="text-center mt-12" delay={620}>
           <a
             href="#register"
             className="inline-block bg-brand-royal hover:bg-brand-royal/95 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all"
           >
             Start Your Clinic Registration
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

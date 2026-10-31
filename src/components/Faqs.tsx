@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal.tsx'
 
 const faqs = [
   {
@@ -63,20 +64,34 @@ export default function Faqs() {
     <section id="faqs" className="py-20 bg-brand-lightBg border-t border-slate-200/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-royal font-extrabold text-sm uppercase tracking-wider">Got Questions?</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+          <Reveal
+            as="span"
+            className="block text-brand-royal font-extrabold text-sm uppercase tracking-wider"
+            delay={0}
+          >
+            Got Questions?
+          </Reveal>
+          <Reveal
+            as="h2"
+            className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2"
+            delay={80}
+          >
             Frequently Asked Questions
-          </h2>
-          <p className="text-slate-600 mt-4">
+          </Reveal>
+          <Reveal as="p" className="text-slate-600 mt-4" delay={160}>
             Clear information regarding MedAlign practice partnerships and clinic operations.
-          </p>
+          </Reveal>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
             return (
-              <div key={faq.question} className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+              <Reveal
+                key={faq.question}
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden"
+                delay={200 + index * 45}
+              >
                 <button
                   className="faq-btn w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center hover:text-brand-royal transition-colors"
                   onClick={() => toggleFaq(index)}
@@ -92,7 +107,7 @@ export default function Faqs() {
                 >
                   {faq.answer}
                 </div>
-              </div>
+              </Reveal>
             )
           })}
         </div>
