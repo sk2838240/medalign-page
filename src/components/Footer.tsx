@@ -9,13 +9,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1: Brand Info */}
           <Reveal className="lg:col-span-2 space-y-4" delay={0}>
-            <a href="#" className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-brand-royal flex items-center justify-center text-brand-mint font-bold text-lg">
-                <i className="fa-solid fa-stetho-scope"></i>
-              </div>
-              <span className="text-2xl font-extrabold text-white tracking-tight">
-                Med<span className="text-brand-steel">Align</span>
-              </span>
+            <a href="#home" className="flex items-center space-x-3">
+              <img
+                src="/favicon.svg"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-lg"
+              />
+              <img
+                src="/medalign-wordmark-light.png"
+                alt="MedAlign"
+                width={1157}
+                height={96}
+                className="h-6 w-auto"
+              />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               MedAlign (getmedalign.com) is a patient to clinic matching platform that simplifies healthcare discovery by evaluating patient requirements and connecting them with suitable healthcare providers.
