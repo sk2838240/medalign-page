@@ -11,6 +11,7 @@ import Navbar from './components/Navbar.tsx'
 import Onboarding from './components/Onboarding.tsx'
 import Problem from './components/Problem.tsx'
 import RegistrationForm from './components/RegistrationForm.tsx'
+import VideoSection from './components/VideoSection.tsx'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <About />
         <Problem />
         <HowItWorks />
+        <VideoSection />
         <Benefits />
         <Onboarding />
         <CommercialModel />

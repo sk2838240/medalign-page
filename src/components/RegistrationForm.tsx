@@ -1,5 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import Reveal from './Reveal.tsx'
+import SectionImage from './SectionImage.tsx'
+import { siteImages } from '../assets/images/index.ts'
 
 declare global {
   interface Window {
@@ -41,143 +43,212 @@ export default function RegistrationForm() {
 
   return (
     <section id="register" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal
-          className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 custom-shadow-lg"
+          className="bg-white rounded-3xl border border-slate-200 custom-shadow-lg overflow-hidden grid lg:grid-cols-12"
           direction="scale"
           delay={80}
         >
-          <Reveal className="text-center space-y-3 mb-10" delay={200}>
-            <span className="block text-brand-royal font-extrabold text-sm uppercase tracking-wider">Registration</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Let's Bring Your Clinic Closer to the Right Patients.
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base">
-              Complete the registration form below. Our team will review your practice information and get in touch to discuss partnership onboarding.
-            </p>
-          </Reveal>
+          {/* Left Image Panel */}
+          <div className="relative lg:col-span-5 overflow-hidden">
+            <SectionImage
+              src={siteImages.registerPanel.src}
+              alt={siteImages.registerPanel.alt}
+              width={siteImages.registerPanel.width}
+              height={siteImages.registerPanel.height}
+              className="h-48 sm:h-64 lg:h-full"
+              imgClassName="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-royal/90 via-brand-royal/55 to-brand-royal/20"></div>
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white space-y-4">
+              <h3 className="text-lg font-extrabold">What happens next</h3>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-100">
+                <li className="flex items-start gap-2.5">
+                  <i className="fa-solid fa-circle-check text-brand-mint text-sm mt-0.5"></i>
+                  <span>Our partnership team reviews your clinic scope and capabilities.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <i className="fa-solid fa-circle-check text-brand-mint text-sm mt-0.5"></i>
+                  <span>Clinic credentials and provider details are verified.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <i className="fa-solid fa-circle-check text-brand-mint text-sm mt-0.5"></i>
+                  <span>Your clinic profile is mapped into the MedAlign matching engine.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-          {/* Form Element */}
-          <Reveal
-            as="form"
-            id="clinic-form"
-            className={`space-y-6 ${submitted ? 'hidden' : ''}`}
-            delay={320}
-            onSubmit={handleFormSubmit}
-          >
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* 1. Clinic or Hospital Name */}
+          {/* Right Form Panel */}
+          <div className="lg:col-span-7 p-8 sm:p-12">
+            <Reveal className="text-center space-y-3 mb-10" delay={200}>
+              <span className="block text-brand-royal font-extrabold text-sm uppercase tracking-wider">Registration</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Let's Bring Your Clinic Closer to the Right Patients.
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base">
+                Complete the registration form below. Our team will review your practice information and get in touch to discuss partnership onboarding.
+              </p>
+            </Reveal>
+
+            {/* Form Element */}
+            <Reveal
+              as="form"
+              id="clinic-form"
+              className={`space-y-6 ${submitted ? 'hidden' : ''}`}
+              delay={320}
+              onSubmit={handleFormSubmit}
+            >
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* 1. Clinic or Hospital Name */}
+                <div>
+                  <label
+                    htmlFor="clinic_name"
+                    className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >
+                    Clinic or Hospital Name <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="clinic_name"
+                    name="clinic_name"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. Apex Healthcare Centre"
+                  />
+                </div>
+
+                {/* 2. Contact Person Name */}
+                <div>
+                  <label
+                    htmlFor="contact_name"
+                    className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >
+                    Contact Person Name <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contact_name"
+                    name="contact_name"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. Dr. Sarah Jenkins"
+                  />
+                </div>
+
+                {/* 3. Designation */}
+                <div>
+                  <label
+                    htmlFor="designation"
+                    className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >
+                    Designation <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="designation"
+                    name="designation"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. Practice Director / Medical Lead"
+                  />
+                </div>
+
+                {/* 4. Business Email */}
+                <div>
+                  <label htmlFor="email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Business Email <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. contact@apexhealth.com"
+                  />
+                </div>
+
+                {/* 5. Contact Number */}
+                <div>
+                  <label htmlFor="phone" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Contact Number <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. +1 (555) 019-2834"
+                  />
+                </div>
+
+                {/* 6. Clinic Location */}
+                <div>
+                  <label htmlFor="location" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Clinic Location (City / Region) <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="e.g. Boston, MA"
+                  />
+                </div>
+
+                {/* 7. Medical Speciality */}
+                <div>
+                  <label htmlFor="speciality" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Primary Medical Speciality <span className="text-rose-500">*</span>
+                  </label>
+                  <select
+                    id="speciality"
+                    name="speciality"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm bg-white"
+                  >
+                    <option value="">Select Primary Speciality</option>
+                    {specialityOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* 8. Website URL (optional) */}
+                <div>
+                  <label htmlFor="website" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Website URL <span className="text-slate-400 font-normal">(Optional)</span>
+                  </label>
+                  <input
+                    type="url"
+                    id="website"
+                    name="website"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
+                    placeholder="https://www.apexhealth.com"
+                  />
+                </div>
+              </div>
+
+              {/* 9. Number of Clinic Locations */}
               <div>
                 <label
-                  htmlFor="clinic_name"
+                  htmlFor="locations_count"
                   className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
                 >
-                  Clinic or Hospital Name <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="clinic_name"
-                  name="clinic_name"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. Apex Healthcare Centre"
-                />
-              </div>
-
-              {/* 2. Contact Person Name */}
-              <div>
-                <label
-                  htmlFor="contact_name"
-                  className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
-                >
-                  Contact Person Name <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="contact_name"
-                  name="contact_name"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. Dr. Sarah Jenkins"
-                />
-              </div>
-
-              {/* 3. Designation */}
-              <div>
-                <label
-                  htmlFor="designation"
-                  className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
-                >
-                  Designation <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="designation"
-                  name="designation"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. Practice Director / Medical Lead"
-                />
-              </div>
-
-              {/* 4. Business Email */}
-              <div>
-                <label htmlFor="email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Business Email <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. contact@apexhealth.com"
-                />
-              </div>
-
-              {/* 5. Contact Number */}
-              <div>
-                <label htmlFor="phone" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Contact Number <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. +1 (555) 019-2834"
-                />
-              </div>
-
-              {/* 6. Clinic Location */}
-              <div>
-                <label htmlFor="location" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Clinic Location (City / Region) <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="e.g. Boston, MA"
-                />
-              </div>
-
-              {/* 7. Medical Speciality */}
-              <div>
-                <label htmlFor="speciality" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Primary Medical Speciality <span className="text-rose-500">*</span>
+                  Number of Clinic Locations <span className="text-rose-500">*</span>
                 </label>
                 <select
-                  id="speciality"
-                  name="speciality"
+                  id="locations_count"
+                  name="locations_count"
                   required
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm bg-white"
                 >
-                  <option value="">Select Primary Speciality</option>
-                  {specialityOptions.map((option) => (
+                  {locationsCountOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -185,84 +256,47 @@ export default function RegistrationForm() {
                 </select>
               </div>
 
-              {/* 8. Website URL (optional) */}
+              {/* 10. Additional Information (optional) */}
               <div>
-                <label htmlFor="website" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Website URL <span className="text-slate-400 font-normal">(Optional)</span>
+                <label
+                  htmlFor="additional_info"
+                  className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                >
+                  Additional Information <span className="text-slate-400 font-normal">(Optional)</span>
                 </label>
-                <input
-                  type="url"
-                  id="website"
-                  name="website"
+                <textarea
+                  id="additional_info"
+                  name="additional_info"
+                  rows={4}
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                  placeholder="https://www.apexhealth.com"
-                />
+                  placeholder="Tell us about specific clinical services or requirements your practice prioritises..."
+                ></textarea>
               </div>
-            </div>
 
-            {/* 9. Number of Clinic Locations */}
-            <div>
-              <label
-                htmlFor="locations_count"
-                className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
-              >
-                Number of Clinic Locations <span className="text-rose-500">*</span>
-              </label>
-              <select
-                id="locations_count"
-                name="locations_count"
-                required
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm bg-white"
-              >
-                {locationsCountOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+              {/* Privacy Consent & Spam Protection */}
+              <div className="flex items-start space-x-3 text-xs text-slate-600">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  required
+                  className="mt-0.5 rounded text-brand-royal focus:ring-brand-royal"
+                />
+                <label htmlFor="consent">
+                  I consent to MedAlign storing and processing my business details to evaluate our clinic partnership request in accordance with the Privacy Policy.
+                </label>
+              </div>
 
-            {/* 10. Additional Information (optional) */}
-            <div>
-              <label
-                htmlFor="additional_info"
-                className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
-              >
-                Additional Information <span className="text-slate-400 font-normal">(Optional)</span>
-              </label>
-              <textarea
-                id="additional_info"
-                name="additional_info"
-                rows={4}
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                placeholder="Tell us about specific clinical services or requirements your practice prioritises..."
-              ></textarea>
-            </div>
-
-            {/* Privacy Consent & Spam Protection */}
-            <div className="flex items-start space-x-3 text-xs text-slate-600">
-              <input
-                type="checkbox"
-                id="consent"
-                name="consent"
-                required
-                className="mt-0.5 rounded text-brand-royal focus:ring-brand-royal"
-              />
-              <label htmlFor="consent">
-                I consent to MedAlign storing and processing my business details to evaluate our clinic partnership request in accordance with the Privacy Policy.
-              </label>
-            </div>
-
-            {/* CTA Submit Button */}
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-brand-royal hover:bg-brand-royal/95 text-white font-bold py-4 rounded-xl shadow-lg transition-all text-base"
-              >
-                Submit Partnership Request
-              </button>
-            </div>
-          </Reveal>
+              {/* CTA Submit Button */}
+              <div>
+                <button
+                  type="submit"
+                  className="w-full bg-brand-royal hover:bg-brand-royal/95 text-white font-bold py-4 rounded-xl shadow-lg transition-all text-base"
+                >
+                  Submit Partnership Request
+                </button>
+              </div>
+            </Reveal>
 
           {/* Form Submission Confirmation Alert Box (Hidden by default) */}
           <Reveal
@@ -277,6 +311,7 @@ export default function RegistrationForm() {
               Thank you for registering your clinic with MedAlign. A confirmation email has been dispatched to your provided contact address. Our clinic onboarding team will reach out shortly.
             </p>
           </Reveal>
+          </div>
         </Reveal>
       </div>
     </section>

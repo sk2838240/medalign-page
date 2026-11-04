@@ -1,8 +1,10 @@
 import Reveal from './Reveal.tsx'
+import SectionImage from './SectionImage.tsx'
+import { siteImages } from '../assets/images/index.ts'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-brand-lightBg border-y border-slate-200/60">
+    <section id="about" className="py-20 bg-brand-lightBg border-y border-slate-200/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Text Column */}
@@ -69,11 +71,32 @@ export default function About() {
           </div>
 
           {/* Graphic Column */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 space-y-6">
+            <Reveal
+              className="relative rounded-3xl overflow-hidden border border-slate-100 custom-shadow"
+              direction="right"
+              delay={80}
+            >
+              <SectionImage
+                src={siteImages.aboutPlatform.src}
+                alt={siteImages.aboutPlatform.alt}
+                width={siteImages.aboutPlatform.width}
+                height={siteImages.aboutPlatform.height}
+                className="aspect-[3/2]"
+                imgClassName="h-full w-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-royal/60 via-transparent to-transparent"></div>
+              <div className="absolute left-5 bottom-5 right-5">
+                <span className="inline-block bg-brand-mint text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full">
+                  Structured Matching Engine
+                </span>
+              </div>
+            </Reveal>
+
             <Reveal
               className="relative bg-white p-8 rounded-3xl custom-shadow border border-slate-100"
               direction="right"
-              delay={120}
+              delay={160}
             >
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 pb-4 border-b border-slate-100">

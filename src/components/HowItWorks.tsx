@@ -47,6 +47,8 @@ const steps = [
 ]
 
 import Reveal from './Reveal.tsx'
+import SectionImage from './SectionImage.tsx'
+import { siteImages } from '../assets/images/index.ts'
 
 export default function HowItWorks() {
   return (
@@ -96,6 +98,28 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
+
+        {/* Process Illustration Band */}
+        <Reveal
+          className="mt-12 relative rounded-3xl overflow-hidden border border-slate-200/80 custom-shadow"
+          delay={520}
+        >
+          <SectionImage
+            src={siteImages.howItWorksBand.src}
+            alt={siteImages.howItWorksBand.alt}
+            width={siteImages.howItWorksBand.width}
+            height={siteImages.howItWorksBand.height}
+            sizes="(min-width: 1024px) 1280px, 100vw"
+            className="aspect-[2/1]"
+            imgClassName="h-full w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-royal/80 via-brand-royal/25 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+            <p className="text-white font-bold text-sm sm:text-base max-w-2xl">
+              A structured pathway from first assessment to confirmed consultation.
+            </p>
+          </div>
+        </Reveal>
 
         {/* Clarification Notice */}
         <Reveal

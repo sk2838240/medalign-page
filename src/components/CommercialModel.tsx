@@ -1,8 +1,10 @@
 import Reveal from './Reveal.tsx'
+import SectionImage from './SectionImage.tsx'
+import { siteImages } from '../assets/images/index.ts'
 
 export default function CommercialModel() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
@@ -81,6 +83,16 @@ export default function CommercialModel() {
               direction="right"
               delay={120}
             >
+              <SectionImage
+                src={siteImages.commercialModel.src}
+                alt={siteImages.commercialModel.alt}
+                width={siteImages.commercialModel.width}
+                height={siteImages.commercialModel.height}
+                decorative
+                className="absolute inset-0 h-full w-full"
+                imgClassName="h-full w-full object-cover opacity-40"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/70"></div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-royal/40 rounded-full filter blur-3xl"></div>
               <div className="relative z-10 space-y-6">
                 <div className="inline-block bg-brand-mint text-slate-900 text-xs font-extrabold px-3 py-1 rounded-full">

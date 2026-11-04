@@ -1,0 +1,134 @@
+{
+  "heroClinic": {
+    "src": "https://images.pexels.com/photos/7580254/pexels-photo-7580254.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "fallback": "https://images.pexels.com/photos/7580254/pexels-photo-7580254/free-photo-of-doctor-sitting-by-table-with-patient.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "credit": "Photo by cottonbro studio on Pexels",
+    "width": 1000,
+    "height": 1250,
+    "quality": 78,
+    "maxBytes": 184320,
+    "alt": "A doctor with a stethoscope consults a patient in a bright clinic office.",
+    "out": "assets"
+  },
+  "registerPanel": {
+    "src": "https://images.pexels.com/photos/14438786/pexels-photo-14438786.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "fallback": "https://images.pexels.com/photos/14438786/pexels-photo-14438786/free-photo-of-man-and-woman-doctors-in-aprons.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "credit": "Photo by Tran Nhu Tuan on Pexels",
+    "width": 900,
+    "height": 1200,
+    "quality": 78,
+    "maxBytes": 143360,
+    "alt": "Two healthcare professionals in white coats in a clean, bright setting.",
+    "out": "assets"
+  },
+  "eligibilityHospital": {
+    "src": "https://images.pexels.com/photos/36938793/pexels-photo-36938793.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fallback": "https://images.pexels.com/photos/36938793/pexels-photo-36938793/free-photo-of-modern-hospital-building-in-gainesville-florida.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "credit": "Photo by Juan Carlos  Fernández Alemán on Pexels",
+    "width": 600,
+    "height": 600,
+    "quality": 76,
+    "maxBytes": 56320,
+    "alt": "Modern hospital building with a glass facade under a clear blue sky.",
+    "out": "assets"
+  },
+  "eligibilityClinic": {
+    "src": "https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "fallback": "https://images.pexels.com/photos/8459996/pexels-photo-8459996/free-photo-of-waiting-room-in-a-hospital.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "credit": "Photo by Los Muertos Crew on Pexels",
+    "width": 600,
+    "height": 600,
+    "quality": 76,
+    "maxBytes": 56320,
+    "alt": "Bright and clean medical clinic waiting area with modern seating.",
+    "out": "assets"
+  },
+  "eligibilitySpecialist": {
+    "src": "https://images.pexels.com/photos/8460089/pexels-photo-8460089.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "fallback": "https://images.pexels.com/photos/8460089/pexels-photo-8460089/free-photo-of-a-man-lying-on-the-bed.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "credit": "Photo by Los Muertos Crew on Pexels",
+    "width": 600,
+    "height": 600,
+    "quality": 76,
+    "maxBytes": 56320,
+    "alt": "A patient undergoing a cardiology examination with an ECG machine in a clinic.",
+    "out": "assets"
+  },
+  "eligibilityDiagnostic": {
+    "src": "https://images.pexels.com/photos/7089017/pexels-photo-7089017.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "fallback": "https://images.pexels.com/photos/7089017/pexels-photo-7089017/free-photo-of-technology-hospital-medicine-indoors.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "credit": "Photo by MART  PRODUCTION on Pexels",
+    "width": 600,
+    "height": 600,
+    "quality": 76,
+    "maxBytes": 56320,
+    "alt": "A modern MRI scanner in a well-lit hospital imaging room.",
+    "out": "assets"
+  },
+  "eligibilityPractitioner": {
+    "src": "https://images.pexels.com/photos/15962798/pexels-photo-15962798.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fallback": "https://images.pexels.com/photos/15962798/pexels-photo-15962798/free-photo-of-smiling-young-doctor.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "credit": "Photo by Tran Nhu Tuan on Pexels",
+    "width": 600,
+    "height": 600,
+    "quality": 76,
+    "maxBytes": 56320,
+    "alt": "Portrait of a smiling doctor wearing a stethoscope and eyeglasses.",
+    "out": "assets"
+  },
+  "aboutPlatform": {
+    "src": "https://images.pexels.com/photos/5327654/pexels-photo-5327654.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "fallback": "https://images.pexels.com/photos/5327654/pexels-photo-5327654/free-photo-of-healthcare-professionals-working-on-their-gadgets-while-sitting-next-to-each-other.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "credit": "Photo by Thirdman   on Pexels",
+    "width": 1200,
+    "height": 800,
+    "quality": 77,
+    "maxBytes": 112640,
+    "alt": "Medical professionals collaborating over digital devices in a clinical setting.",
+    "out": "assets"
+  },
+  "commercialModel": {
+    "src": "https://images.pexels.com/photos/12599544/pexels-photo-12599544.jpeg?auto=compress&cs=tinysrgb&w=1667",
+    "fallback": "https://images.pexels.com/photos/12599544/pexels-photo-12599544/free-photo-of-doctor-talking-with-woman-in-white-long-sleeve-shirt.jpeg?auto=compress&cs=tinysrgb&w=1667",
+    "credit": "Photo by Lucas Guimarães Bueno on Pexels",
+    "width": 1200,
+    "height": 900,
+    "quality": 76,
+    "maxBytes": 112640,
+    "alt": "A doctor conducting a patient consultation in a bright, modern medical office.",
+    "out": "assets"
+  },
+  "howItWorksBand": {
+    "src": "https://images.pexels.com/photos/29948395/pexels-photo-29948395.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "fallback": "https://images.pexels.com/photos/29948395/pexels-photo-29948395/free-photo-of-modern-hospital-corridor-in-ankara-turkiye.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "credit": "Photo by Burçak Çubukçu on Pexels",
+    "width": 1600,
+    "height": 800,
+    "quality": 77,
+    "maxBytes": 153600,
+    "alt": "A wide, well-lit hospital corridor with clean modern finishes.",
+    "out": "assets"
+  },
+  "videoPoster": {
+    "src": "https://images.pexels.com/photos/6129147/pexels-photo-6129147.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "fallback": "https://images.pexels.com/photos/6129147/pexels-photo-6129147/free-photo-of-doctor-wearing-face-mask.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "credit": "Photo by RDNE Stock project on Pexels",
+    "width": 1920,
+    "height": 1080,
+    "quality": 74,
+    "maxBytes": 163840,
+    "alt": "Healthcare professionals in discussion at a hospital reception, emphasising teamwork and communication.",
+    "out": "assets"
+  },
+  "finalCtaBg": {
+    "src": "https://images.pexels.com/photos/28589265/pexels-photo-28589265.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "fallback": "https://images.pexels.com/photos/28589265/pexels-photo-28589265/free-photo-of-modern-curved-glass-building-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "credit": "Photo by Francesco Ungaro on Pexels",
+    "width": 1920,
+    "height": 1080,
+    "quality": 74,
+    "maxBytes": 163840,
+    "alt": "Modern curved glass building exterior at dusk.",
+    "out": "assets"
+  }
+}

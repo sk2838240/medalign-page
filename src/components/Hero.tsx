@@ -1,4 +1,6 @@
 import Reveal from './Reveal.tsx'
+import SectionImage from './SectionImage.tsx'
+import { siteImages } from '../assets/images/index.ts'
 
 export default function Hero() {
   return (
@@ -67,7 +69,7 @@ export default function Hero() {
           {/* Right Column Graphic Visual */}
           <div className="lg:col-span-5">
             <Reveal
-              className="relative mx-auto max-w-md lg:max-w-none"
+              className="relative mx-auto max-w-md lg:max-w-none pb-12 sm:pb-14"
               direction="scale"
               delay={220}
             >
@@ -75,60 +77,71 @@ export default function Hero() {
               <div className="absolute -top-6 -right-6 w-72 h-72 gradient-bg rounded-full opacity-20 filter blur-3xl pointer-events-none"></div>
               <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-brand-mint rounded-full opacity-30 filter blur-3xl pointer-events-none"></div>
 
-              {/* Card UI Visual Simulation */}
-              <div className="relative bg-white rounded-3xl p-6 sm:p-8 custom-shadow-lg border border-slate-100 space-y-6">
-                {/* Flow Diagram Graphic */}
-                <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 border border-slate-100">
+              {/* Clinic Photo Frame */}
+              <div className="relative rounded-3xl overflow-hidden border border-slate-100 custom-shadow-lg bg-slate-100">
+                <SectionImage
+                  src={siteImages.heroClinic.src}
+                  alt={siteImages.heroClinic.alt}
+                  width={siteImages.heroClinic.width}
+                  height={siteImages.heroClinic.height}
+                  priority
+                  className="aspect-[4/5]"
+                  imgClassName="h-full w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-royal/70 to-transparent"></div>
+                <div className="absolute left-4 bottom-4 flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 bg-brand-mint text-slate-900 text-[11px] font-extrabold px-3 py-1.5 rounded-full shadow-md">
+                    <i className="fa-solid fa-circle-check text-xs"></i>
+                    92% Speciality Alignment
+                  </span>
+                </div>
+              </div>
+
+              {/* Floating Match Card */}
+              <div className="absolute left-0 sm:-left-4 lg:-left-10 bottom-4 sm:bottom-6 w-[85%] sm:w-[78%] rounded-2xl bg-white border border-slate-100 shadow-2xl p-4 sm:p-5">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center text-brand-steel text-lg shadow-sm">
+                    <div className="w-9 h-9 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center text-brand-steel text-sm shadow-sm">
                       <i className="fa-solid fa-user"></i>
                     </div>
-                    <p className="text-xs font-bold mt-2 text-slate-700">Patient Need</p>
+                    <p className="text-[10px] font-bold mt-1.5 text-slate-700">Patient Need</p>
                   </div>
-                  <div className="flex-1 px-3 text-center">
+                  <div className="flex-1 px-2 text-center">
                     <div className="h-0.5 bg-slate-200 relative">
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-brand-mint text-slate-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-slate-200">
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-brand-mint text-slate-900 text-[9px] font-extrabold px-2 py-0.5 rounded-full border border-slate-200 whitespace-nowrap">
                         Smart Match
                       </div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto rounded-full gradient-bg flex items-center justify-center text-white text-lg shadow-md">
+                    <div className="w-9 h-9 mx-auto rounded-full gradient-bg flex items-center justify-center text-white text-sm shadow-md">
                       <i className="fa-solid fa-hospital-user"></i>
                     </div>
-                    <p className="text-xs font-bold mt-2 text-slate-700">Your Clinic</p>
+                    <p className="text-[10px] font-bold mt-1.5 text-slate-700">Your Clinic</p>
                   </div>
                 </div>
 
-                {/* Mock Match Card Preview */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Live Requirement Assessment</span>
-                    <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">High Speciality Alignment</span>
+                <div className="mt-3 space-y-2">
+                  <div className="flex justify-between items-center text-xs font-semibold text-slate-800">
+                    <span>Consultation Speciality:</span>
+                    <span className="text-brand-royal font-bold">Orthopaedics & Care</span>
                   </div>
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 space-y-2">
-                    <div className="flex justify-between items-center text-sm font-semibold text-slate-800">
-                      <span>Consultation Speciality:</span>
-                      <span className="text-brand-royal font-bold">Orthopaedics & Care</span>
-                    </div>
-                    <div className="flex justify-between items-center text-xs text-slate-500">
-                      <span>Matching Parameters:</span>
-                      <span>Geographic + Capability</span>
-                    </div>
-                    <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                      <div className="bg-brand-steel h-full w-[92%] rounded-full"></div>
-                    </div>
+                  <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-brand-steel h-full w-[92%] rounded-full"></div>
                   </div>
-                </div>
-
-                {/* Trust Badge */}
-                <div className="flex items-center space-x-3 p-3 rounded-xl bg-brand-mint/10 border border-brand-mint/30">
-                  <i className="fa-solid fa-shield-halved text-slate-800 text-lg"></i>
-                  <p className="text-xs text-slate-700 font-medium">
-                    Structured data verification ensures meaningful consultation enquiries for your medical team.
-                  </p>
                 </div>
               </div>
+            </Reveal>
+
+            {/* Trust Line */}
+            <Reveal className="mt-1 max-w-sm" delay={340}>
+              <p className="text-xs text-slate-600 font-medium flex items-start gap-2">
+                <i className="fa-solid fa-shield-halved text-brand-royal text-sm mt-0.5"></i>
+                <span>
+                  Structured data verification ensures meaningful consultation enquiries for your
+                  medical team.
+                </span>
+              </p>
             </Reveal>
           </div>
         </div>
