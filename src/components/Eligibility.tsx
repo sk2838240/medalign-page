@@ -69,32 +69,36 @@ export default function Eligibility() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid auto-rows-fr items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {providers.map((provider, index) => {
             const photo = siteImages[provider.image as keyof typeof siteImages]
             return (
-              <Reveal
-                key={provider.title}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden text-center hover:border-brand-steel hover:shadow-lg transition-all"
-                delay={200 + index * 80}
-              >
-                <SectionImage
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={photo.width}
-                  height={photo.height}
-                  className="aspect-[4/3]"
-                  imgClassName="h-full w-full object-cover"
-                />
-                <div className="p-6 space-y-3">
-                  <div
-                    className={`w-12 h-12 mx-auto rounded-full ${provider.iconBg} ${provider.iconText} flex items-center justify-center text-xl -mt-12 border-4 border-white shadow-sm`}
-                  >
-                    <i className={`fa-solid ${provider.icon}`}></i>
+              <Reveal key={provider.title} className="h-full" delay={200 + index * 80}>
+                <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-center transition-all hover:border-brand-steel hover:shadow-lg">
+                  <div className="relative shrink-0">
+                    <SectionImage
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={photo.width}
+                      height={photo.height}
+                      className="h-44 shrink-0 sm:h-48"
+                      imgClassName="h-full w-full object-cover"
+                    />
+                    <span
+                      className={`absolute left-1/2 top-full -translate-x-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white text-xl shadow-sm ${provider.iconBg} ${provider.iconText}`}
+                    >
+                      <i className={`fa-solid ${provider.icon}`}></i>
+                    </span>
                   </div>
-                  <h3 className="font-bold text-slate-900 text-base">{provider.title}</h3>
-                  <p className="text-xs text-slate-500">{provider.description}</p>
-                </div>
+                  <div className="flex flex-1 flex-col px-6 pb-6 pt-10">
+                    <h3 className="text-base font-bold leading-6 text-slate-900 xl:min-h-[3rem]">
+                      {provider.title}
+                    </h3>
+                    <p className="mt-2 min-h-[2.5rem] text-xs leading-relaxed text-slate-500 xl:min-h-[3.75rem]">
+                      {provider.description}
+                    </p>
+                  </div>
+                </article>
               </Reveal>
             )
           })}
