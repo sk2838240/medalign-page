@@ -40,7 +40,7 @@ Site photography is sourced from [Pexels](https://www.pexels.com/license) (free 
 ## Structure
 
 - `src/components/` — one component per page section
-- `src/components/VideoSection.tsx` — full-bleed video section (placed after `HowItWorks`). Drop the final video at `public/videos/medalign-overview.mp4`; until that file exists the section renders its poster frame with a "Video coming soon" panel.
+- `src/components/VideoSection.tsx` — centred vertical video section (placed after `HowItWorks`). It plays `public/videos/Medalign Reel-1.mp4` in a `9:16` frame through a centered play control.
 - `src/components/Reveal.tsx` — `<Reveal>` wrapper that fades/slides content in when it scrolls into view
 - `src/components/SectionImage.tsx` — `<SectionImage>` wrapper that renders site photography with intrinsic dimensions, lazy loading and optional decorative mode
 - `src/hooks/useReveal.ts` — IntersectionObserver hook powering `Reveal` (also usable directly, e.g. `Navbar`)

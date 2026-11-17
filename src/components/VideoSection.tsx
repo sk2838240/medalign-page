@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Reveal from './Reveal.tsx'
 import SectionImage from './SectionImage.tsx'
 import { siteImages } from '../assets/images/index.ts'
 
-const VIDEO_SRC = '/videos/medalign-overview.mp4'
+const VIDEO_SRC = '/videos/Medalign%20Reel-1.mp4'
 
 const highlights = [
   {
@@ -24,7 +24,16 @@ const highlights = [
 ]
 
 export default function VideoSection() {
+  const videoRef = useRef<HTMLVideoElement>(null)
   const [videoError, setVideoError] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const handlePlay = () => {
+    const video = videoRef.current
+    if (!video) return
+
+    void video.play().catch(() => setIsPlaying(false))
+  }
 
   return (
     <section id="video" className="relative bg-slate-950 overflow-hidden">
@@ -55,49 +64,69 @@ export default function VideoSection() {
       </div>
 
       <Reveal className="relative w-full" direction="scale" delay={200}>
-        {videoError ? (
-          <div className="relative w-full aspect-video bg-slate-900">
-            <SectionImage
-              src={siteImages.videoPoster.src}
-              alt={siteImages.videoPoster.alt}
-              width={siteImages.videoPoster.width}
-              height={siteImages.videoPoster.height}
-              className="absolute inset-0 h-full w-full"
-              imgClassName="h-full w-full object-cover opacity-40"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/40"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-3">
-              <span className="inline-flex items-center gap-2 bg-brand-mint text-slate-900 text-xs font-extrabold px-4 py-2 rounded-full">
-                <i className="fa-solid fa-film"></i>
-                Platform Walkthrough
-              </span>
-              <p className="text-white text-lg sm:text-xl font-bold">Video coming soon</p>
-              <p className="text-slate-300 text-xs sm:text-sm max-w-md">
-                Our product walkthrough is being finalised. Leave your clinic details below and we
-                will share it directly.
-              </p>
-              <a
-                href="#register"
-                className="mt-2 inline-block bg-white text-brand-royal font-bold px-6 py-3 rounded-xl transition-all hover:bg-slate-100"
+        <div className="relative mx-auto aspect-[9/16] w-full max-w-[420px] overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl shadow-black/40">
+          {videoError ? (
+            <>
+              <SectionImage
+                src={siteImages.videoPoster.src}
+                alt={siteImages.videoPoster.alt}
+                width={siteImages.videoPoster.width}
+                height={siteImages.videoPoster.height}
+                className="absolute inset-0 h-full w-full"
+                imgClassName="h-full w-full object-cover opacity-40"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/40"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-3">
+                <span className="inline-flex items-center gap-2 bg-brand-mint text-slate-900 text-xs font-extrabold px-4 py-2 rounded-full">
+                  <i className="fa-solid fa-film"></i>
+                  Platform Walkthrough
+                </span>
+                <p className="text-white text-lg sm:text-xl font-bold">Video unavailable</p>
+                <p className="text-slate-300 text-xs sm:text-sm max-w-md">
+                  Our product walkthrough could not be loaded. Leave your clinic details below and we
+                  will share it directly.
+                </p>
+                <a
+                  href="#register"
+                  className="mt-2 inline-block bg-white text-brand-royal font-bold px-6 py-3 rounded-xl transition-all hover:bg-slate-100"
+                >
+                  Request the Walkthrough
+                </a>
+              </div>
+            </>
+          ) : (
+            <>
+              <video
+                ref={videoRef}
+                className="h-full w-full object-contain"
+                poster={siteImages.videoPoster.src}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="MedAlign platform walkthrough video"
+                onPlay={() => setIsPlaying(true)}
+                onEnded={() => setIsPlaying(false)}
+                onError={() => {
+                  setVideoError(true)
+                  setIsPlaying(false)
+                }}
               >
-                Request the Walkthrough
-              </a>
-            </div>
-          </div>
-        ) : (
-          <video
-            className="block w-full aspect-video object-cover bg-slate-900"
-            poster={siteImages.videoPoster.src}
-            controls
-            playsInline
-            preload="metadata"
-            aria-label="MedAlign platform walkthrough video"
-            onError={() => setVideoError(true)}
-          >
-            <source src={VIDEO_SRC} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+                <source src={VIDEO_SRC} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {!isPlaying && (
+                <button
+                  type="button"
+                  onClick={handlePlay}
+                  aria-label="Play the MedAlign overview video"
+                  className="absolute left-1/2 top-1/2 z-10 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand-mint text-brand-royal shadow-2xl shadow-brand-royal/30 transition-transform hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"
+                >
+                  <i className="fa-solid fa-play ml-1 text-2xl"></i>
+                </button>
+              )}
+            </>
+          )}
+        </div>
       </Reveal>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
