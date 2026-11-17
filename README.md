@@ -36,6 +36,7 @@ Stock photography is sourced from [Pexels](https://www.pexels.com/license) (free
 
 - `public/logo-final.png` — full-colour navigation mark used in the header.
 - `public/footer-logo.png` — full-colour footer lockup used in the footer.
+- `public/favicon.png` — square favicon generated from the navigation mark.
 
 ## Structure
 
