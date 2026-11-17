@@ -4,6 +4,7 @@ import CommercialModel from './components/CommercialModel.tsx'
 import Eligibility from './components/Eligibility.tsx'
 import Faqs from './components/Faqs.tsx'
 import FinalCta from './components/FinalCta.tsx'
+import FloatingActions from './components/FloatingActions.tsx'
 import Footer from './components/Footer.tsx'
 import Hero from './components/Hero.tsx'
 import HowItWorks from './components/HowItWorks.tsx'
@@ -32,6 +33,7 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingActions />
     </>
   )
 }

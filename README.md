@@ -38,6 +38,11 @@ Stock photography is sourced from [Pexels](https://www.pexels.com/license) (free
 - `public/footer-logo.png` — full-colour footer lockup used in the footer.
 - `public/favicon.png` — square favicon generated from the navigation mark.
 
+## Contact and chat
+
+- `src/contactConfig.ts` — official business phone number, WhatsApp link, and FormSubmit lead recipient. Add the phone number to `businessPhone` when available.
+- `src/components/FloatingActions.tsx` — fixed Call, WhatsApp, and AI Chat actions. The assistant collects contact details one field at a time and submits the lead through FormSubmit.
+
 ## Structure
 
 - `src/components/` — one component per page section
