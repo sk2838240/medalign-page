@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },

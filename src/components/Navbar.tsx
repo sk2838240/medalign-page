@@ -25,14 +25,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* MedAlign Logo */}
-          <a href="#home" className="flex items-center group">
+          <a href="#home" className="flex items-center gap-3 group">
             <img
               src="/logo-final.png"
-              alt="MedAlign"
+              alt=""
               width={1130}
               height={749}
               className="h-10 sm:h-12 w-auto group-hover:opacity-80 transition-opacity"
             />
+            <span className="font-poppins text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-brand-royal">
+              MedAlign
+            </span>
           </a>
 
           {/* Desktop Nav Links */}
