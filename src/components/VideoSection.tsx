@@ -14,7 +14,7 @@ const highlights = [
   {
     icon: 'fa-diagram-project',
     title: 'Matching Logic',
-    description: 'Speciality, geography and scope evaluated before an opportunity is shared.',
+    description: 'Treatment focus, geography and scope evaluated before an opportunity is shared.',
   },
   {
     icon: 'fa-handshake',

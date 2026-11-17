@@ -28,7 +28,7 @@ export default function Hero() {
               className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl"
               delay={200}
             >
-              MedAlign helps patients discover suitable healthcare providers through a structured matching process. Partner with us to connect with patients seeking consultations that align with your clinic's specialities and services.
+              MedAlign helps patients discover suitable speciality clinics through a structured matching process. Connect with patients seeking hormone, peptide, beauty, and body contouring consultations at clinics like yours.
             </Reveal>
             <Reveal
               className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4"
@@ -115,7 +115,7 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <div className="w-9 h-9 mx-auto rounded-full gradient-bg flex items-center justify-center text-white text-sm shadow-md">
-                      <i className="fa-solid fa-hospital-user"></i>
+                      <i className="fa-solid fa-spa"></i>
                     </div>
                     <p className="text-[10px] font-bold mt-1.5 text-slate-700">Your Clinic</p>
                   </div>
@@ -123,8 +123,8 @@ export default function Hero() {
 
                 <div className="mt-3 space-y-2">
                   <div className="flex justify-between items-center text-xs font-semibold text-slate-800">
-                    <span>Consultation Speciality:</span>
-                    <span className="text-brand-royal font-bold">Orthopaedics & Care</span>
+                    <span>Treatment Focus:</span>
+                    <span className="text-brand-royal font-bold">Hormones & Peptides</span>
                   </div>
                   <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
                     <div className="bg-brand-steel h-full w-[92%] rounded-full"></div>
@@ -139,7 +139,7 @@ export default function Hero() {
                 <i className="fa-solid fa-shield-halved text-brand-royal text-sm mt-0.5"></i>
                 <span>
                   Structured data verification ensures meaningful consultation enquiries for your
-                  medical team.
+                  clinic team.
                 </span>
               </p>
             </Reveal>

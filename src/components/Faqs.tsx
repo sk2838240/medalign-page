@@ -5,17 +5,17 @@ const faqs = [
   {
     question: '1. What is MedAlign?',
     answer:
-      'MedAlign is a patient to clinic matching platform designed to help patients discover suitable healthcare providers based on their specific clinical requirements and treatment needs.',
+      'MedAlign is a patient-to-clinic matching platform designed to help patients discover suitable speciality clinics, including med spas and cosmetic clinics, based on their treatment preferences and goals.',
   },
   {
     question: '2. How does MedAlign connect patients with clinics?',
     answer:
-      'MedAlign uses a structured assessment process where patients input their health needs, location preferences, and requested services. Our platform matching engine then aligns these requirements with appropriate partner clinics.',
+      'MedAlign uses a structured assessment process where patients input their treatment goals, location preferences, and requested services. Our matching engine then aligns these requirements with appropriate partner clinics.',
   },
   {
-    question: '3. Which healthcare providers can register?',
+    question: '3. Which clinics can register?',
     answer:
-      'Multispeciality hospitals, independent clinics, specialist medical centres, and verified healthcare facilities across recognized disciplines are eligible to join the network following our verification process.',
+      'Verified med spas and cosmetic clinics focused on hormones, peptides, beauty treatments, body contouring, and related aesthetic services are eligible to join the network following our verification process.',
   },
   {
     question: '4. Is there a fee to register?',
@@ -24,12 +24,12 @@ const faqs = [
   {
     question: '5. How does qualified consultation pricing work?',
     answer:
-      'Instead of charging a flat monthly listing fee, MedAlign commercial pricing is aligned around qualified consultation opportunities matching your practice specialities.',
+      'Instead of charging a flat monthly listing fee, MedAlign commercial pricing is aligned around qualified consultation opportunities matching your clinic treatment focus.',
   },
   {
     question: '6. How are clinics matched with patients?',
     answer:
-      'Matching evaluates patient assessment inputs against partner clinic medical specialities, geographical locations, treatment scope, and clinic consultation capabilities.',
+      'Matching evaluates patient assessment inputs against partner clinic services, treatment focus, geographical locations, and consultation capabilities.',
   },
   {
     question: '7. What patient information is shared?',
@@ -39,17 +39,17 @@ const faqs = [
   {
     question: '8. How does clinic onboarding work?',
     answer:
-      'After submitting your registration form, our team conducts an initial discussion, verifies healthcare credentials, sets up your practice profile, and activates opportunity matching.',
+      'After submitting your registration form, our team conducts an initial discussion, verifies clinic and practitioner credentials, sets up your profile, and activates opportunity matching.',
   },
   {
     question: '9. Can clinics update their profiles?',
     answer:
-      'Yes, clinics can update their operational details, provider lists, specialities, and service availability at any time by contacting our support team.',
+      'Yes, clinics can update their operational details, practitioner lists, services, and treatment availability at any time by contacting our support team.',
   },
   {
     question: '10. Does registration guarantee consultations?',
     answer:
-      'Consultation volume depends on patient search demand in your region and speciality alignment. MedAlign does not guarantee arbitrary consultation volumes, focusing instead on matching quality.',
+      'Consultation volume depends on patient demand in your region and treatment focus alignment. MedAlign does not guarantee arbitrary consultation volumes, focusing instead on matching quality.',
   },
 ]
 

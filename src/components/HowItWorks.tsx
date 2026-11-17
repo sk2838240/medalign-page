@@ -3,7 +3,7 @@ const steps = [
     number: '01',
     title: 'Patient Assessment',
     description:
-      'Patients complete a structured short assessment regarding their healthcare requirements and preferences.',
+      'Patients complete a structured short assessment regarding their treatment requirements and preferences.',
     label: 'Step 1: Patient Input',
     badge: 'bg-brand-royal',
     badgeText: 'text-white',
@@ -12,7 +12,7 @@ const steps = [
     number: '02',
     title: 'Requirement Analysis',
     description:
-      'The MedAlign platform evaluates the information provided to clarify care requirements and clinical scope.',
+      'The MedAlign platform evaluates the information provided to clarify treatment goals and service scope.',
     label: 'Step 2: Platform Analysis',
     badge: 'bg-brand-steel',
     badgeText: 'text-white',
@@ -21,7 +21,7 @@ const steps = [
     number: '03',
     title: 'Clinic Matching',
     description:
-      'Matching considers medical speciality, services, treatment requirements, geographical suitability, and provider capabilities.',
+      'Matching considers treatment focus, services, geographical suitability, and clinic capabilities.',
     label: 'Step 3: Multi-Factor Match',
     badge: 'bg-brand-gradientBlue',
     badgeText: 'text-white',
@@ -30,7 +30,7 @@ const steps = [
     number: '04',
     title: 'Clinic Connection',
     description:
-      'Suitable clinic options and relevant consultation opportunities are identified and presented for consideration.',
+      'Suitable speciality clinic options and relevant consultation opportunities are identified and presented for consideration.',
     label: 'Step 4: Opportunity Identified',
     badge: 'bg-slate-800',
     badgeText: 'text-white',
@@ -39,7 +39,7 @@ const steps = [
     number: '05',
     title: 'Consultation',
     description:
-      'Patients can proceed with a selected clinic to explore or arrange an official in person or digital consultation.',
+      'Patients can proceed with a selected speciality clinic to explore or arrange an official in person or digital consultation.',
     label: 'Step 5: Patient Care Journey',
     badge: 'bg-brand-mint',
     badgeText: 'text-slate-900',
@@ -70,7 +70,7 @@ export default function HowItWorks() {
             From Patient Assessment to Clinic Consultation.
           </Reveal>
           <Reveal as="p" className="text-slate-600 mt-4" delay={160}>
-            A clear, 5-step structured process ensuring high alignment between patients and healthcare providers.
+            A clear, 5-step structured process ensuring high alignment between patients and speciality clinics.
           </Reveal>
         </div>
 
@@ -128,7 +128,7 @@ export default function HowItWorks() {
         >
           <i className="fa-solid fa-triangle-exclamation text-amber-600 text-base mt-0.5 shrink-0"></i>
           <p>
-            <strong>Important Medical Notice:</strong> MedAlign facilitates patient discovery and clinic matching. MedAlign is not a diagnostic service and does not provide medical treatment recommendations or diagnoses. All consultations take place directly between healthcare professionals and patients.
+            <strong>Important Medical Notice:</strong> MedAlign facilitates patient discovery and clinic matching. MedAlign is not a diagnostic service and does not provide medical treatment recommendations or diagnoses. All consultations take place directly between clinic professionals and patients.
           </p>
         </Reveal>
       </div>

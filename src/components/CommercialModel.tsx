@@ -48,7 +48,7 @@ export default function CommercialModel() {
                 <div>
                   <h3 className="font-bold text-slate-900">Qualified Consultation Based Pricing</h3>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    Our commercial framework reflects verified consultation opportunities aligned with your specialities.
+                    Our commercial framework reflects verified consultation opportunities aligned with your treatment focus.
                   </p>
                 </div>
               </Reveal>
@@ -100,7 +100,7 @@ export default function CommercialModel() {
                 </div>
                 <h3 className="text-2xl font-bold">Why Clinics Prefer Qualified Consultation Models</h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  Traditional marketing charges clinics fixed fees regardless of whether enquiries fit medical capabilities. MedAlign structures value around actual clinical relevance and matching quality.
+                  Traditional marketing charges clinics fixed fees regardless of whether enquiries fit their treatment capabilities. MedAlign structures value around actual clinical relevance and matching quality.
                 </p>
 
                 <div className="border-t border-slate-800 pt-6 grid grid-cols-2 gap-4">

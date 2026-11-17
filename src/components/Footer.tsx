@@ -9,24 +9,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1: Brand Info */}
           <Reveal className="lg:col-span-2 space-y-4" delay={0}>
-            <a href="#home" className="flex items-center space-x-3">
+            <a href="#home" className="inline-block">
               <img
-                src="/favicon.svg"
-                alt=""
-                width={32}
-                height={32}
-                className="h-8 w-8 rounded-lg"
-              />
-              <img
-                src="/medalign-wordmark-light.png"
+                src="/medalign-logo-light.png"
                 alt="MedAlign"
-                width={1157}
+                width={744}
                 height={96}
-                className="h-6 w-auto"
+                className="h-10 w-auto"
               />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              MedAlign (getmedalign.com) is a patient to clinic matching platform that simplifies healthcare discovery by evaluating patient requirements and connecting them with suitable healthcare providers.
+              MedAlign (getmedalign.com) is a patient-to-clinic matching platform that simplifies speciality clinic discovery by connecting patients with suitable med spas and cosmetic clinics.
             </p>
             <p className="text-xs text-slate-500">Official contact: partnerships@getmedalign.com</p>
           </Reveal>
@@ -93,14 +86,14 @@ export default function Footer() {
         >
           <p className="font-bold text-slate-300">Medical Disclaimer:</p>
           <p>
-            MedAlign facilitates patient discovery and clinic matching. MedAlign is not a healthcare provider, does not offer medical advice, diagnostic evaluations, or treatment recommendations, and does not replace professional clinical decision making. All patient consultations occur directly between patients and their chosen healthcare providers.
+            MedAlign facilitates patient discovery and clinic matching. MedAlign is a matching platform, not a treatment provider, does not offer medical advice, diagnostic evaluations, or treatment recommendations, and does not replace professional clinical decision making. All patient consultations occur directly between patients and their chosen clinic professionals.
           </p>
         </Reveal>
 
         {/* Bottom Copyright */}
         <Reveal className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500" delay={400}>
           <p>
-            &copy; <span id="year">{year}</span> MedAlign. All rights reserved. Registered healthcare partnership platform.
+            &copy; <span id="year">{year}</span> MedAlign. All rights reserved. Speciality clinic partnership platform.
           </p>
         </Reveal>
       </div>

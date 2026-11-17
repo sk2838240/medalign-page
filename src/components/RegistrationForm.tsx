@@ -9,14 +9,14 @@ declare global {
   }
 }
 
-const specialityOptions = [
-  { value: 'multispeciality', label: 'Multispeciality Hospital' },
-  { value: 'orthopaedics', label: 'Orthopaedics & Sports Medicine' },
-  { value: 'cardiology', label: 'Cardiology & Vascular' },
-  { value: 'dermatology', label: 'Dermatology & Care' },
-  { value: 'paediatrics', label: 'Paediatrics' },
-  { value: 'general', label: 'General Practice & Internal Medicine' },
-  { value: 'other', label: 'Other Specialities' },
+const clinicTypeOptions = [
+  { value: 'med-spa', label: 'Med Spa' },
+  { value: 'cosmetic-clinic', label: 'Cosmetic Clinic' },
+  { value: 'hormone-clinic', label: 'Hormone Clinic' },
+  { value: 'peptide-clinic', label: 'Peptide Clinic' },
+  { value: 'beauty-clinic', label: 'Beauty Clinic' },
+  { value: 'body-contouring', label: 'Body Contouring Clinic' },
+  { value: 'other-speciality', label: 'Other Speciality Clinic' },
 ]
 
 const locationsCountOptions = [
@@ -69,7 +69,7 @@ export default function RegistrationForm() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <i className="fa-solid fa-circle-check text-brand-mint text-sm mt-0.5"></i>
-                  <span>Clinic credentials and provider details are verified.</span>
+                  <span>Clinic credentials and practitioner details are verified.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <i className="fa-solid fa-circle-check text-brand-mint text-sm mt-0.5"></i>
@@ -100,13 +100,13 @@ export default function RegistrationForm() {
               onSubmit={handleFormSubmit}
             >
               <div className="grid md:grid-cols-2 gap-6">
-                {/* 1. Clinic or Hospital Name */}
+                {/* 1. Clinic Name */}
                 <div>
                   <label
                     htmlFor="clinic_name"
                     className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
                   >
-                    Clinic or Hospital Name <span className="text-rose-500">*</span>
+                    Clinic Name <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -114,7 +114,7 @@ export default function RegistrationForm() {
                     name="clinic_name"
                     required
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                    placeholder="e.g. Apex Healthcare Centre"
+                    placeholder="e.g. Aurelia Med Spa"
                   />
                 </div>
 
@@ -165,7 +165,7 @@ export default function RegistrationForm() {
                     name="email"
                     required
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                    placeholder="e.g. contact@apexhealth.com"
+                    placeholder="e.g. contact@aureliamedspa.com"
                   />
                 </div>
 
@@ -199,10 +199,10 @@ export default function RegistrationForm() {
                   />
                 </div>
 
-                {/* 7. Medical Speciality */}
+                {/* 7. Primary Clinic Type */}
                 <div>
                   <label htmlFor="speciality" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                    Primary Medical Speciality <span className="text-rose-500">*</span>
+                    Primary Clinic Type <span className="text-rose-500">*</span>
                   </label>
                   <select
                     id="speciality"
@@ -210,8 +210,8 @@ export default function RegistrationForm() {
                     required
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm bg-white"
                   >
-                    <option value="">Select Primary Speciality</option>
-                    {specialityOptions.map((option) => (
+                    <option value="">Select Clinic Type</option>
+                    {clinicTypeOptions.map((option) => (
                       <option key={option.value} value={option.value}>
                         {option.label}
                       </option>
@@ -229,7 +229,7 @@ export default function RegistrationForm() {
                     id="website"
                     name="website"
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-royal focus:border-brand-royal outline-none transition-all text-sm"
-                    placeholder="https://www.apexhealth.com"
+                    placeholder="https://www.aureliamedspa.com"
                   />
                 </div>
               </div>

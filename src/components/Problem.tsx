@@ -1,14 +1,14 @@
 const patientChallenges = [
-  'Difficulty finding suitable healthcare providers matching specific clinical needs.',
+  'Difficulty finding suitable speciality clinics matching specific treatment goals.',
   'Overwhelmed by too many options online without clear direction or evaluation guidance.',
   'Excessive time spent researching individual clinic websites and generic directories.',
-  'Uncertainty about where to begin when looking for specialist consultations.',
+  'Uncertainty about where to begin when looking for speciality treatments.',
 ]
 
 const clinicChallenges = [
-  'Difficulty reaching patients actively seeking their precise medical specialities.',
+  'Difficulty reaching patients actively seeking their precise treatment focus.',
   'Dealing with unrelated or unsuitable enquiries that consume administration bandwidth.',
-  'Limited digital visibility in an increasingly noisy medical directory marketplace.',
+  'Limited digital visibility in an increasingly noisy clinic directory marketplace.',
   'Difficulty identifying relevant consultation opportunities before initial bookings.',
 ]
 
@@ -34,7 +34,7 @@ export default function Problem() {
             Finding the Right Clinic Should Not Be Complicated.
           </Reveal>
           <Reveal as="p" className="text-slate-600 mt-4" delay={160}>
-            Healthcare discovery has historically been fragmented, causing frustration for patients and inefficiency for clinics.
+            Speciality clinic discovery has historically been fragmented, causing frustration for patients and inefficiency for clinics.
           </Reveal>
         </div>
 
@@ -84,7 +84,7 @@ export default function Problem() {
           <div className="space-y-2 max-w-2xl">
             <h4 className="text-xl font-bold">How MedAlign Bridges This Discovery Gap</h4>
             <p className="text-slate-200 text-sm sm:text-base">
-              By introducing a structured assessment layer, MedAlign standardises patient requests and aligns them directly with healthcare providers who possess the exact scope of services required.
+              By introducing a structured assessment layer, MedAlign standardises patient requests and aligns them directly with speciality clinics offering the exact scope of services required.
             </p>
           </div>
           <a

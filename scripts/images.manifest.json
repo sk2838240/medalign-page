@@ -7,7 +7,7 @@
     "height": 1250,
     "quality": 78,
     "maxBytes": 184320,
-    "alt": "A doctor with a stethoscope consults a patient in a bright clinic office.",
+    "alt": "A practitioner with a stethoscope consults a patient in a bright clinic office.",
     "out": "assets"
   },
   "registerPanel": {
@@ -18,18 +18,7 @@
     "height": 1200,
     "quality": 78,
     "maxBytes": 143360,
-    "alt": "Two healthcare professionals in white coats in a clean, bright setting.",
-    "out": "assets"
-  },
-  "eligibilityHospital": {
-    "src": "https://images.pexels.com/photos/36938793/pexels-photo-36938793.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "fallback": "https://images.pexels.com/photos/36938793/pexels-photo-36938793/free-photo-of-modern-hospital-building-in-gainesville-florida.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "credit": "Photo by Juan Carlos  Fernández Alemán on Pexels",
-    "width": 600,
-    "height": 600,
-    "quality": 76,
-    "maxBytes": 56320,
-    "alt": "Modern hospital building with a glass facade under a clear blue sky.",
+    "alt": "Two clinic professionals in white coats in a clean, bright setting.",
     "out": "assets"
   },
   "eligibilityClinic": {
@@ -40,7 +29,7 @@
     "height": 600,
     "quality": 76,
     "maxBytes": 56320,
-    "alt": "Bright and clean medical clinic waiting area with modern seating.",
+    "alt": "Bright and clean speciality clinic waiting area with modern seating.",
     "out": "assets"
   },
   "eligibilitySpecialist": {
@@ -51,18 +40,7 @@
     "height": 600,
     "quality": 76,
     "maxBytes": 56320,
-    "alt": "A patient undergoing a cardiology examination with an ECG machine in a clinic.",
-    "out": "assets"
-  },
-  "eligibilityDiagnostic": {
-    "src": "https://images.pexels.com/photos/7089017/pexels-photo-7089017.jpeg?auto=compress&cs=tinysrgb&w=900",
-    "fallback": "https://images.pexels.com/photos/7089017/pexels-photo-7089017/free-photo-of-technology-hospital-medicine-indoors.jpeg?auto=compress&cs=tinysrgb&w=900",
-    "credit": "Photo by MART  PRODUCTION on Pexels",
-    "width": 600,
-    "height": 600,
-    "quality": 76,
-    "maxBytes": 56320,
-    "alt": "A modern MRI scanner in a well-lit hospital imaging room.",
+    "alt": "A patient receiving a personalised treatment consultation in a modern clinic.",
     "out": "assets"
   },
   "eligibilityPractitioner": {
@@ -73,7 +51,7 @@
     "height": 600,
     "quality": 76,
     "maxBytes": 56320,
-    "alt": "Portrait of a smiling doctor wearing a stethoscope and eyeglasses.",
+    "alt": "Portrait of a smiling clinic practitioner wearing a stethoscope and eyeglasses.",
     "out": "assets"
   },
   "aboutPlatform": {
@@ -84,7 +62,7 @@
     "height": 800,
     "quality": 77,
     "maxBytes": 112640,
-    "alt": "Medical professionals collaborating over digital devices in a clinical setting.",
+    "alt": "Clinic professionals collaborating over digital devices in a clinical setting.",
     "out": "assets"
   },
   "commercialModel": {
@@ -95,7 +73,7 @@
     "height": 900,
     "quality": 76,
     "maxBytes": 112640,
-    "alt": "A doctor conducting a patient consultation in a bright, modern medical office.",
+    "alt": "A practitioner conducting a patient consultation in a bright, modern clinic.",
     "out": "assets"
   },
   "howItWorksBand": {
@@ -106,7 +84,7 @@
     "height": 800,
     "quality": 77,
     "maxBytes": 153600,
-    "alt": "A wide, well-lit hospital corridor with clean modern finishes.",
+    "alt": "A wide, well-lit clinic interior with clean modern finishes.",
     "out": "assets"
   },
   "videoPoster": {
@@ -117,7 +95,7 @@
     "height": 1080,
     "quality": 74,
     "maxBytes": 163840,
-    "alt": "Healthcare professionals in discussion at a hospital reception, emphasising teamwork and communication.",
+    "alt": "Clinic professionals in discussion at a reception, emphasising teamwork and communication.",
     "out": "assets"
   },
   "finalCtaBg": {

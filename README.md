@@ -1,6 +1,6 @@
 # MedAlign Landing Page
 
-React + TypeScript + Tailwind CSS landing page for MedAlign, a patient-to-clinic matching platform.
+React + TypeScript + Tailwind CSS landing page for MedAlign, a patient-to-speciality-clinic matching platform for med spas and cosmetic clinics.
 
 ## Stack
 
@@ -28,6 +28,14 @@ Site photography is sourced from [Pexels](https://www.pexels.com/license) (free 
 - `src/assets/images/index.ts` — generated. Exports `siteImages` with the resolved URL, intrinsic `width`/`height` and alt text for every slot, so components cannot drift from the encoded file.
 - `src/components/SectionImage.tsx` — the shared `<img>` primitive. Always emits `width`/`height` (no layout shift), lazy-loads by default, and supports decorative usage via `decorative`.
 - `scripts/image-sources.log.md` — photographer credits and Pexels detail-page links for every photo.
+
+## Brand logo
+
+`public/medalign-logo.jpg` is the source artwork: a CMYK scan on a white matte with light-grey artboard rules. It is not used directly in the page.
+
+- `logo-lockup.mjs` — regenerates the shipped lockups from that scan. It converts CMYK to sRGB with the Adobe formula (sharp's built-in conversion does not match browser rendering), drops the neutral guide rules and white matte, separates the wordmark glyphs from the emblem by connected-component analysis, and composites a horizontal lockup.
+- `public/medalign-logo.png` — full-colour lockup (emblem + wordmark) used in the header.
+- `public/medalign-logo-light.png` — all-white lockup used in the footer.
 
 ## Structure
 

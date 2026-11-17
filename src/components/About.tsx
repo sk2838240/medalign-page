@@ -21,10 +21,10 @@ export default function About() {
               className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight"
               delay={80}
             >
-              Making Healthcare Discovery More Meaningful.
+              Making Speciality Clinic Discovery More Meaningful.
             </Reveal>
             <Reveal as="p" className="text-slate-600 leading-relaxed" delay={160}>
-              MedAlign is a patient to clinic matching platform that simplifies healthcare discovery by evaluating patient requirements and connecting them with suitable healthcare providers. We eliminate vague searches and streamline the pathway between patient consultation requests and practice specialities.
+              MedAlign is a patient-to-clinic matching platform that simplifies speciality clinic discovery by evaluating patient requirements and connecting them with suitable med spas and cosmetic clinics offering hormones, peptides, beauty treatments, and body contouring.
             </Reveal>
 
             {/* 3 Values */}
@@ -51,7 +51,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900">Relevant Clinic Matching</h3>
-                  <p className="text-sm text-slate-600 mt-1">Our system evaluates medical specialities, geographic preferences, and provider scope to ensure mutual suitability.</p>
+                  <p className="text-sm text-slate-600 mt-1">Our system evaluates clinic specialities, geographic preferences, and treatment scope to ensure mutual suitability.</p>
                 </div>
               </Reveal>
 
@@ -105,7 +105,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="font-extrabold text-slate-900">The MedAlign Platform Engine</h4>
-                    <p className="text-xs text-slate-500">Bridging discovery between care seekers and care providers</p>
+                    <p className="text-xs text-slate-500">Bridging patients with speciality clinics</p>
                   </div>
                 </div>
 
@@ -119,7 +119,7 @@ export default function About() {
                     <p className="text-sm font-bold text-slate-800 mt-1">Speciality & Capabilities</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <p className="text-xs text-slate-500 font-semibold">Provider Model</p>
+                    <p className="text-xs text-slate-500 font-semibold">Clinic Network</p>
                     <p className="text-sm font-bold text-slate-800 mt-1">Qualified Consultations</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
@@ -134,7 +134,7 @@ export default function About() {
                     <span>High Quality Discovery</span>
                   </div>
                   <p className="text-sm font-medium">
-                    "Connecting patients directly with doctors and clinics designed to address their specific requirements."
+                    "Connecting patients directly with speciality clinics equipped to address their specific goals."
                   </p>
                 </div>
               </div>

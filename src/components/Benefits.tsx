@@ -5,7 +5,7 @@ const benefits = [
     iconText: 'text-white',
     title: 'Relevant Patient Enquiries',
     description:
-      "Connect with patients whose requirements align directly with your clinic's services and medical specialities.",
+      "Connect with patients whose requirements align directly with your clinic's services and treatment focus.",
   },
   {
     icon: 'fa-globe',
@@ -37,7 +37,7 @@ const benefits = [
     iconText: 'text-slate-900',
     title: 'Simple Onboarding',
     description:
-      'Join our healthcare network through a straightforward registration and verification process guided by our team.',
+      'Join our speciality clinic network through a straightforward registration and verification process guided by our team.',
   },
   {
     icon: 'fa-chart-line',
@@ -71,7 +71,7 @@ export default function Benefits() {
             More Relevant Patient Connections. Better Opportunities for Your Clinic.
           </Reveal>
           <Reveal as="p" className="text-slate-600 mt-4" delay={160}>
-            Designed specifically to support healthcare providers in reaching patients who require their specific expertise.
+            Designed specifically to support speciality clinics in reaching patients who require their specific expertise.
           </Reveal>
         </div>
 

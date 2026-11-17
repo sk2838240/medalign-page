@@ -5,7 +5,7 @@ const onboardingSteps = [
     badgeText: 'text-white',
     title: 'Submit Your Details',
     description:
-      'Complete the clinic registration form below with basic information regarding your practice and medical specialities.',
+      'Complete the clinic registration form below with basic information regarding your clinic type and treatment focus.',
   },
   {
     number: '2',
@@ -21,7 +21,7 @@ const onboardingSteps = [
     badgeText: 'text-white',
     title: 'Clinic Verification',
     description:
-      'Submitted clinic credentials and provider details are reviewed to maintain network quality and patient trust.',
+      'Submitted clinic credentials and practitioner details are reviewed to maintain network quality and patient trust.',
   },
   {
     number: '4',

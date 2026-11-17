@@ -25,7 +25,7 @@ export default function FinalCta() {
             Your Clinic Could Be the Right Match for Someone Looking for Care.
           </Reveal>
           <Reveal as="p" className="text-slate-100 text-base sm:text-lg leading-relaxed" delay={120}>
-            Become part of the MedAlign network and explore a more structured approach to connecting with patients seeking the specific healthcare services you offer.
+            Become part of the MedAlign network and connect with patients seeking the specific aesthetic treatments and speciality services you offer.
           </Reveal>
           <Reveal
             className="pt-4 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4"
