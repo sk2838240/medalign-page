@@ -4,7 +4,6 @@ import registerPanel from './registerPanel.webp'
 import eligibilityClinic from './eligibilityClinic.webp'
 import eligibilitySpecialist from './eligibilitySpecialist.webp'
 import eligibilityPractitioner from './eligibilityPractitioner.webp'
-import aboutPlatform from './aboutPlatform.webp'
 import commercialModel from './commercialModel.webp'
 import videoPoster from './videoPoster.webp'
 import finalCtaBg from './finalCtaBg.webp'
@@ -15,7 +14,6 @@ export const siteImages = {
   eligibilityClinic: { src: eligibilityClinic, width: 600, height: 600, alt: "Bright and clean speciality clinic waiting area with modern seating." },
   eligibilitySpecialist: { src: eligibilitySpecialist, width: 600, height: 600, alt: "A patient receiving a personalised treatment consultation in a modern clinic." },
   eligibilityPractitioner: { src: eligibilityPractitioner, width: 600, height: 600, alt: "Portrait of a smiling clinic practitioner wearing a stethoscope and eyeglasses." },
-  aboutPlatform: { src: aboutPlatform, width: 1200, height: 800, alt: "Clinic professionals collaborating over digital devices in a clinical setting." },
   commercialModel: { src: commercialModel, width: 1200, height: 900, alt: "A practitioner conducting a patient consultation in a bright, modern clinic." },
   videoPoster: { src: videoPoster, width: 1920, height: 1080, alt: "Clinic professionals in discussion at a reception, emphasising teamwork and communication." },
   finalCtaBg: { src: finalCtaBg, width: 1920, height: 1080, alt: "Modern curved glass building exterior at dusk." },

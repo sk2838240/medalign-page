@@ -21,7 +21,10 @@ npm run images   # re-download, crop and encode the site photography
 
 ## Images
 
-Site photography is sourced from [Pexels](https://www.pexels.com/license) (free commercial use, no attribution required) and encoded to WebP by `npm run images`.
+Stock photography is sourced from [Pexels](https://www.pexels.com/license) (free commercial use, no attribution required) and encoded to WebP by `npm run images`. Supplied section imagery is used directly from `public/`.
+
+- `public/images.jpeg` — About section image.
+- `public/professiionals.webp` — Hero section image.
 
 - `scripts/images.manifest.json` — the source of truth: source URL, fallback URL, photographer credit, target dimensions, WebP quality and byte budget per slot.
 - `scripts/build-images.mjs` — downloads each source, crops with `sharp`'s attention strategy, encodes to WebP, fails the build if a slot exceeds its byte budget, composes `public/og-image.jpg`, and regenerates `src/assets/images/index.ts`.

@@ -54,17 +54,6 @@
     "alt": "Portrait of a smiling clinic practitioner wearing a stethoscope and eyeglasses.",
     "out": "assets"
   },
-  "aboutPlatform": {
-    "src": "https://images.pexels.com/photos/5327654/pexels-photo-5327654.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "fallback": "https://images.pexels.com/photos/5327654/pexels-photo-5327654/free-photo-of-healthcare-professionals-working-on-their-gadgets-while-sitting-next-to-each-other.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "credit": "Photo by Thirdman   on Pexels",
-    "width": 1200,
-    "height": 800,
-    "quality": 77,
-    "maxBytes": 112640,
-    "alt": "Clinic professionals collaborating over digital devices in a clinical setting.",
-    "out": "assets"
-  },
   "commercialModel": {
     "src": "https://images.pexels.com/photos/12599544/pexels-photo-12599544.jpeg?auto=compress&cs=tinysrgb&w=1667",
     "fallback": "https://images.pexels.com/photos/12599544/pexels-photo-12599544/free-photo-of-doctor-talking-with-woman-in-white-long-sleeve-shirt.jpeg?auto=compress&cs=tinysrgb&w=1667",

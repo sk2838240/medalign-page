@@ -1,6 +1,5 @@
 import Reveal from './Reveal.tsx'
 import SectionImage from './SectionImage.tsx'
-import { siteImages } from '../assets/images/index.ts'
 
 export default function About() {
   return (
@@ -78,10 +77,10 @@ export default function About() {
               delay={80}
             >
               <SectionImage
-                src={siteImages.aboutPlatform.src}
-                alt={siteImages.aboutPlatform.alt}
-                width={siteImages.aboutPlatform.width}
-                height={siteImages.aboutPlatform.height}
+                src="/images.jpeg"
+                alt="Clinic professionals collaborating on patient care."
+                width={640}
+                height={480}
                 className="aspect-[3/2]"
                 imgClassName="h-full w-full object-cover"
               />

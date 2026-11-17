@@ -1,6 +1,5 @@
 import Reveal from './Reveal.tsx'
 import SectionImage from './SectionImage.tsx'
-import { siteImages } from '../assets/images/index.ts'
 
 export default function Hero() {
   return (
@@ -80,10 +79,10 @@ export default function Hero() {
               {/* Clinic Photo Frame */}
               <div className="relative rounded-3xl overflow-hidden border border-slate-100 custom-shadow-lg bg-slate-100">
                 <SectionImage
-                  src={siteImages.heroClinic.src}
-                  alt={siteImages.heroClinic.alt}
-                  width={siteImages.heroClinic.width}
-                  height={siteImages.heroClinic.height}
+                  src="/professiionals.webp"
+                  alt="Clinic professionals in a modern clinical setting."
+                  width={3000}
+                  height={3000}
                   priority
                   className="aspect-[4/5]"
                   imgClassName="h-full w-full object-cover"
