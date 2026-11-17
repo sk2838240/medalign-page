@@ -1,5 +1,5 @@
 export const contactConfig = {
-  businessPhone: '',
+  businessPhone: '+1 239-445-4090',
   leadRecipientEmail: 'sourabhsearchmodifiers@gmail.com',
 } as const
 

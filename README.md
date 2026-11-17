@@ -40,7 +40,7 @@ Stock photography is sourced from [Pexels](https://www.pexels.com/license) (free
 
 ## Contact and chat
 
-- `src/contactConfig.ts` — official business phone number, WhatsApp link, and FormSubmit lead recipient. Add the phone number to `businessPhone` when available.
+- `src/contactConfig.ts` — official business phone number, WhatsApp link, and FormSubmit lead recipient.
 - `src/components/FloatingActions.tsx` — fixed Call, WhatsApp, and AI Chat actions. The assistant collects contact details one field at a time and submits the lead through FormSubmit.
 
 ## Structure

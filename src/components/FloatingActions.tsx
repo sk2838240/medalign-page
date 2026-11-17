@@ -25,6 +25,8 @@ type ChatField = {
   autoComplete: string
 }
 
+const SUBMISSION_UI_TIMEOUT_MS = 500
+
 const chatFields: ChatField[] = [
   {
     key: 'name',
@@ -161,7 +163,7 @@ export default function FloatingActions() {
     })
 
     try {
-      const response = await fetch(
+      const request = fetch(
         `https://formsubmit.co/ajax/${contactConfig.leadRecipientEmail}`,
         {
           method: 'POST',
@@ -169,6 +171,7 @@ export default function FloatingActions() {
             'Content-Type': 'application/json',
             Accept: 'application/json',
           },
+          keepalive: true,
           body: JSON.stringify({
             name: details.name,
             clinic_name: details.clinicName,
@@ -184,12 +187,27 @@ export default function FloatingActions() {
           }),
         },
       )
+        .then(async (response) => {
+          const result = (await response.json().catch(() => null)) as {
+            success?: boolean
+          } | null
 
-      const result = (await response.json().catch(() => null)) as {
-        success?: boolean
-      } | null
+          if (!response.ok || result?.success === false) {
+            throw new Error('FormSubmit rejected the enquiry')
+          }
 
-      if (!response.ok || result?.success === false) {
+          return 'success' as const
+        })
+        .catch(() => 'error' as const)
+
+      const outcome = await Promise.race([
+        request,
+        new Promise<'timeout'>((resolve) => {
+          window.setTimeout(() => resolve('timeout'), SUBMISSION_UI_TIMEOUT_MS)
+        }),
+      ])
+
+      if (outcome === 'error') {
         throw new Error('FormSubmit rejected the enquiry')
       }
 
@@ -257,7 +275,7 @@ export default function FloatingActions() {
   }
 
   const callButtonClass =
-    'flex h-11 items-center gap-2 rounded-full border border-slate-200 bg-white px-3 text-xs font-bold text-slate-700 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-royal focus-visible:ring-offset-2'
+    'flex h-11 w-[112px] items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-3 text-xs font-bold text-slate-700 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-royal focus-visible:ring-offset-2'
 
   return (
     <>
@@ -419,7 +437,7 @@ export default function FloatingActions() {
             aria-label={`Call MedAlign at ${contactConfig.businessPhone}`}
           >
             <i className="fa-solid fa-phone text-brand-royal"></i>
-            <span>Call</span>
+            <span>Call Now</span>
           </a>
         ) : (
           <button
@@ -429,7 +447,7 @@ export default function FloatingActions() {
             aria-label="Call MedAlign. Official phone number coming soon."
           >
             <i className="fa-solid fa-phone text-brand-royal"></i>
-            <span>Call</span>
+            <span>Call Now</span>
           </button>
         )}
 
@@ -459,7 +477,7 @@ export default function FloatingActions() {
         <button
           type="button"
           onClick={() => setIsOpen((open) => !open)}
-          className="flex h-12 items-center gap-2 rounded-full gradient-bg px-4 text-xs font-extrabold text-white shadow-xl shadow-brand-royal/25 transition-all hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-royal focus-visible:ring-offset-2"
+          className="flex h-12 w-[112px] items-center justify-center gap-2 rounded-full gradient-bg px-3 text-xs font-extrabold text-white shadow-xl shadow-brand-royal/25 transition-all hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-royal focus-visible:ring-offset-2"
           aria-label={isOpen ? 'Close AI chat' : 'Open AI chat'}
           aria-expanded={isOpen}
         >
