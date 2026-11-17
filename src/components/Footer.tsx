@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1: Brand Info */}
           <Reveal className="lg:col-span-2 space-y-4" delay={0}>
-            <a href="#home" className="inline-block">
+            <a href="#home" className="inline-flex rounded-2xl bg-white p-3 sm:p-4 shadow-sm">
               <img
-                src="/medalign-logo-light.png"
+                src="/footer-logo.png"
                 alt="MedAlign"
-                width={744}
-                height={96}
-                className="h-10 w-auto"
+                width={1130}
+                height={749}
+                className="h-20 sm:h-24 w-auto"
               />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">

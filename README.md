@@ -31,11 +31,8 @@ Site photography is sourced from [Pexels](https://www.pexels.com/license) (free 
 
 ## Brand logo
 
-`public/medalign-logo.jpg` is the source artwork: a CMYK scan on a white matte with light-grey artboard rules. It is not used directly in the page.
-
-- `logo-lockup.mjs` — regenerates the shipped lockups from that scan. It converts CMYK to sRGB with the Adobe formula (sharp's built-in conversion does not match browser rendering), drops the neutral guide rules and white matte, separates the wordmark glyphs from the emblem by connected-component analysis, and composites a horizontal lockup.
-- `public/medalign-logo.png` — full-colour lockup (emblem + wordmark) used in the header.
-- `public/medalign-logo-light.png` — all-white lockup used in the footer.
+- `public/logo-final.png` — full-colour navigation mark used in the header.
+- `public/footer-logo.png` — full-colour footer lockup used in the footer.
 
 ## Structure
 

@@ -27,11 +27,11 @@ export default function Navbar() {
           {/* MedAlign Logo */}
           <a href="#home" className="flex items-center group">
             <img
-              src="/medalign-logo.png"
+              src="/logo-final.png"
               alt="MedAlign"
-              width={744}
-              height={96}
-              className="h-9 sm:h-10 w-auto group-hover:opacity-80 transition-opacity"
+              width={1130}
+              height={749}
+              className="h-10 sm:h-12 w-auto group-hover:opacity-80 transition-opacity"
             />
           </a>
 
