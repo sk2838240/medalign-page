@@ -76,17 +76,6 @@
     "alt": "A practitioner conducting a patient consultation in a bright, modern clinic.",
     "out": "assets"
   },
-  "howItWorksBand": {
-    "src": "https://images.pexels.com/photos/29948395/pexels-photo-29948395.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "fallback": "https://images.pexels.com/photos/29948395/pexels-photo-29948395/free-photo-of-modern-hospital-corridor-in-ankara-turkiye.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "credit": "Photo by Burçak Çubukçu on Pexels",
-    "width": 1600,
-    "height": 800,
-    "quality": 77,
-    "maxBytes": 153600,
-    "alt": "A wide, well-lit clinic interior with clean modern finishes.",
-    "out": "assets"
-  },
   "videoPoster": {
     "src": "https://images.pexels.com/photos/6129147/pexels-photo-6129147.jpeg?auto=compress&cs=tinysrgb&w=1920",
     "fallback": "https://images.pexels.com/photos/6129147/pexels-photo-6129147/free-photo-of-doctor-wearing-face-mask.jpeg?auto=compress&cs=tinysrgb&w=1920",
